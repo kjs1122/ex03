@@ -27,7 +27,7 @@ public class BoardController {
 	
 	@GetMapping("/list")
 	public void list(Criteria cri,Model model) {
-		log.info("list");
+		log.info("/list");
 		
 		model.addAttribute("list", service.getListWithPaging(cri));
 		model.addAttribute("pageMaker", new PageDTO(cri, service.getTotal(cri)));
